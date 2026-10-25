@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mac 时间机器使用指南 · THE XHS DIGEST №01</title>
+<meta name="description" content="综合小红书 15 篇帖子与评论整理的 Mac Time Machine 完整使用指南。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="topbar">
+    <a href="index.html">← 返回总览</a>
+    <span class="brand">THE XHS DIGEST · № 01</span>
+  </nav>
+
+  <header class="article-head">
+    <div class="kicker">KEYWORD <b>「mac 时光机器」</b> · 2026.10.25 · 15 篇 · 13 篇收录</div>
+    <h1>Mac 时间机器使用指南</h1>
+    <p class="deck">设置一次,自动备份每一个瞬间;误删、崩溃、手滑覆盖,都能穿越回事故之前。</p>
+  </header>
+
+  <div class="article-body">
+
+    <p class="lede">小红书搜索「mac 时光机器」,爬取 15 篇帖子(全部通过完整性校验),综合其中 13 篇
+    与评论区,整理出这份指南。最热的一篇有 1714 个赞——一位考生误删了复习资料,靠时间机器找了回来。</p>
+
+    <div class="section-kicker"><span class="num">壹</span><span class="label">准备工作</span></div>
+    <ul>
+      <li><strong>硬盘</strong>:外置硬盘一块,容量至少 ≥ 需要备份的数据量(有博主建议 2 倍或 ≥ 电脑硬盘容量)。机械盘即可,但小文件多时固态明显更快。</li>
+      <li><strong>⚠️ 首次备份会格式化硬盘</strong>,原数据会被清空——先转移盘里的重要文件,最好用专用备份盘。</li>
+      <li>硬盘直插 Mac,不要过 USB 集线器;笔记本首次备份建议插着电源跑完。</li>
+      <li>想一块盘既备份又存文件:先在<strong>磁盘工具</strong>里分区——左侧选最顶层设备(勾选"显示所有设备")→ 抹掉(格式选 APFS)→ 分区 → "+"添加分区 → 应用。500G 数据首次分区备份约 2 小时,中途千万别断电、别拔盘。</li>
+    </ul>
+
+    <div class="section-kicker"><span class="num">贰</span><span class="label">开启设置 · 四步</span></div>
+    <ol>
+      <li>系统设置 → 通用 → <strong>时间机器</strong>(Time Machine)</li>
+      <li>点<strong>添加备份磁盘</strong>,选择外接硬盘</li>
+      <li>点<strong>设置磁盘</strong>,可选加密备份(强烈建议开;密码务必记住,忘了备份就作废;提示存钥匙串时点"始终允许")</li>
+      <li>等首次备份完成;以后<strong>插上硬盘就自动备份</strong></li>
+    </ol>
+    <p>可选调整(在"选项"里):备份频率(每小时/每天/每周/手动,默认每小时)、排除文件夹(如大视频、
+    "下载"目录)、笔记本可勾选"电池供电时备份"。</p>
+
+    <div class="section-kicker"><span class="num">叁</span><span class="label">日常使用</span></div>
+    <ul>
+      <li><strong>增量备份</strong>:只备份变动部分,不是每次全盘复制。</li>
+      <li><strong>快照策略</strong>:过去 24 小时每小时一份、过去一个月每天一份、更早每周一份;盘满自动删除最早的备份。</li>
+      <li>没插硬盘时,Mac 也会在本地生成快照(最多保留 24 小时),误删文件可临时救急。</li>
+      <li>进度看菜单栏时间机器图标;也可随时点"立即备份"手动触发;完成后先推出硬盘再拔。</li>
+    </ul>
+
+    <div class="section-kicker"><span class="num">肆</span><span class="label">恢复 · 核心价值</span></div>
+    <ul>
+      <li><strong>找回误删/旧版文件</strong>:打开时间机器 App,沿时间线滑到任意时间点,点"恢复"即可,不用关机。</li>
+      <li><strong>整机恢复</strong>:关机后按住 Option 开机进恢复界面,从备份还原系统和设置。</li>
+      <li><strong>换新 Mac</strong>:用"迁移助理"从时间机器备份一次性转移全部数据、软件和设置(微信聊天记录等本地数据都会跟着走)。</li>
+    </ul>
+    <blockquote class="pullquote">
+      本来觉得一部分内容不会考就删了,结果之后发现有个重点正好在那一面——真的可以恢复,而且界面这么漂亮。
+      <cite>—— 《Mac时间机器你太牛了》· 1714 赞 / 930 藏 / 70 评</cite>
+    </blockquote>
+
+    <div class="section-kicker"><span class="num">伍</span><span class="label">避坑清单 · 真实教训</span></div>
+    <ol>
+      <li><strong>iCloud ≠ 备份</strong>:iCloud 是同步,时间机器是备份,不能互相替代。同时开着 iCloud"桌面与文稿"同步时,没下载到本地的文件时间机器备不到;若桌面没被备份,检查"从备份中排除"列表。</li>
+      <li><strong>加密密码丢了 = 备份作废</strong>,一定存钥匙串。</li>
+      <li><strong>备份巨慢的元凶是小文件</strong>:12G 的 WhatsApp 数据含 187 万个小文件,预估 22 小时;把该目录加入排除清单后 10 分钟跑完。</li>
+      <li><strong>系统降级不能靠时间机器直接恢复</strong>:从新版降回旧版要走"重装旧系统 + 迁移助理搬数据",折腾数小时。想尝鲜新系统,装到外接 SSD 上玩,别动主力机。</li>
+      <li><strong>网络盘/NAS 备份</strong>需支持相应协议,否则容易连接失败;NAS 上划 1T 有用户反馈只保留近三天备份,行为和本地盘不完全一样。</li>
+      <li><strong>别只留一份备份</strong>:机械硬盘 + NAS 双份轮备,防单点故障;电脑送修/升级系统前务必先备一次。</li>
+      <li><strong>备份失败时</strong>:检查硬盘连接,用磁盘工具的"急救"修复磁盘。</li>
+    </ol>
+
+    <div class="section-kicker"><span class="num">附</span><span class="label">帖子索引 · 15 篇</span></div>
+    <div class="index-list">
+      <div class="index-row"><span class="n">1</span><span class="t"><a href="https://www.xiaohongshu.com/explore/695d0daf000000000e00ec4d" target="_blank">Mac时间机器你太牛了 科技便利人类呀</a></span><span class="e">1714/930/70</span></div>
+      <div class="index-row"><span class="n">2</span><span class="t"><a href="https://www.xiaohongshu.com/explore/686b630b000000001d00f199" target="_blank">苹果mac最佳备份工具-「时间机器」操作指南</a></span><span class="e">176/165/24</span></div>
+      <div class="index-row"><span class="n">3</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6a62e2be000000000301c75b" target="_blank">Mac自带的"后悔药",很多人都没开🍎</a></span><span class="e">113/106/20</span></div>
+      <div class="index-row"><span class="n">4</span><span class="t"><a href="https://www.xiaohongshu.com/explore/68b2ef18000000001d013a41" target="_blank">Mac分区外置硬盘并使用时间机器</a></span><span class="e">106/102/2</span></div>
+      <div class="index-row"><span class="n">5</span><span class="t"><a href="https://www.xiaohongshu.com/explore/69b27e120000000008033c0b" target="_blank">Mac时光机器|普通人10分钟搞定硬盘备份🔥</a></span><span class="e">80/78/1</span></div>
+      <div class="index-row"><span class="n">6</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6ac4bbec0000000018004ea3" target="_blank">Macbook数据备份还原,时间机器怎么用</a></span><span class="e">56/45/8</span></div>
+      <div class="index-row"><span class="n">7</span><span class="t"><a href="https://www.xiaohongshu.com/explore/68c65037000000001d011813" target="_blank">Mac使用教程—救电脑神器:时间机器</a></span><span class="e">37/24/15</span></div>
+      <div class="index-row"><span class="n">8</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6a4a4ef9000000002200b50b" target="_blank">Mac 里这个功能太低调,但真的能救命</a></span><span class="e">32/30/4</span></div>
+      <div class="index-row"><span class="n">9</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6991df3100000000150329fa" target="_blank">Mac时间机器备份教程✅新手零失败</a></span><span class="e">31/22/1</span></div>
+      <div class="index-row"><span class="n">10</span><span class="t"><a href="https://www.xiaohongshu.com/explore/681221c2000000000900dc84" target="_blank">𝟔.💻人生没有后悔药,但Mac有!</a></span><span class="e">24/16</span></div>
+      <div class="index-row"><span class="n">11</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6ad7489f000000000c00fda0" target="_blank">🆘换了Mac,Codex的对话全没了</a></span><span class="e">7/10/4</span></div>
+      <div class="index-row"><span class="n">12</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6aabfb0d000000002901acf0" target="_blank">想从新系统降级?Time Machine也顶不住</a></span><span class="e">3/2/3</span></div>
+      <div class="index-row"><span class="n">13</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6a02a208000000003700f27a" target="_blank">mac时间机器磁盘空间已满</a></span><span class="e">2/1/4</span></div>
+      <div class="index-row"><span class="n">14</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6aa71997000000002802f1aa" target="_blank">MacBook用时间机器备份需超长时间解决办法</a></span><span class="e">1</span></div>
+      <div class="index-row"><span class="n">15</span><span class="t"><a href="https://www.xiaohongshu.com/explore/6ad31410000000000a0236aa" target="_blank">Mac截图工具-晾衣绳(离题未收录正文)</a></span><span class="e">7/6</span></div>
+    </div>
+
+    <span class="endmark">❦ 完</span>
+  </div>
+</div>
+
+<footer class="site-footer wrap">
+  <div>
+    <b>数据说明</b> · ego-browser + xhs-crawler 自动爬取,校验 15 / 无效 0 / 重复 0。
+    互动数格式:赞/藏/评(评论为末位近似值)。<a href="20261025-external-hdd.html">→ 同期另一专题:外置硬盘推荐</a>
+  </div>
+  <div class="colophon">
+    <span>THE XHS DIGEST · № 01</span>
+    <span>2026.10.25</span>
+  </div>
+</footer>
+
+</body>
+</html>
