@@ -316,6 +316,125 @@ tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
   white-space: nowrap;
 }
 
+/* ---------- 画廊 gallery ---------- */
+.gallery-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.3rem 0 1.6rem;
+}
+.gallery-stats {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+.sortbar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+}
+.sort-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  color: var(--faint);
+}
+.sort-btn {
+  appearance: none;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 0.32rem 0.95rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+.sort-btn:hover { border-color: var(--ink); color: var(--ink); }
+.sort-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 2.4rem 2rem;
+  padding-bottom: 1rem;
+}
+
+.card { display: flex; flex-direction: column; }
+.cover-link { display: block; border: 1px solid var(--rule); }
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+.cover-link:hover .cover { transform: scale(1.018); }
+.cover-link:hover { border-color: var(--ink); }
+
+.cover-no {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  fill: var(--accent);
+  letter-spacing: 0.04em;
+}
+.cover-title {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 700;
+  fill: var(--ink);
+  letter-spacing: 0.06em;
+}
+.cover-rule { stroke: var(--accent); stroke-width: 2.5; }
+.cover-deck {
+  font-family: var(--serif);
+  font-size: 12.5px;
+  font-style: italic;
+  fill: var(--muted);
+}
+.cover-brand {
+  font-family: var(--sans);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  fill: var(--ink);
+}
+.cover-date {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  fill: var(--muted);
+}
+
+.card-body { padding-top: 0.9rem; }
+.card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0.4rem 0 0.45rem;
+}
+.card h2 a { color: var(--ink); }
+.card h2 a:hover { color: var(--accent); text-decoration: none; }
+.card .excerpt {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 0.55rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ---------- 页脚 footer ---------- */
 .site-footer {
   margin-top: 4rem;

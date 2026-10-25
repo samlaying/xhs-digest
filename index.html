@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>搜索帖子汇总 · THE XHS DIGEST</title>
-<meta name="description" content="小红书搜索爬取档案站:按日期-主题归档,每爬一次出一期。">
+<meta name="description" content="小红书搜索爬取档案站:按日期-主题归档的封面画廊,可按最新/最热排序。">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,47 +18,85 @@
 
 <main class="wrap">
 
-  <div class="issue-head">
-    <div class="issue-no">№&thinsp;<span class="no">01</span></div>
-    <div class="issue-meta">
-      二〇二六年十月二十五日<br>
-      2 个专题 · 30 篇帖子 · 校验通过 100%
+  <div class="gallery-bar">
+    <div class="sortbar" role="group" aria-label="排序方式">
+      <span class="sort-label">排序</span>
+      <button type="button" class="sort-btn active" data-sort="latest">最新</button>
+      <button type="button" class="sort-btn" data-sort="hot">最热</button>
     </div>
+    <div class="gallery-stats">2 个专题 · 30 篇帖子 · 校验通过 100%</div>
   </div>
 
-  <article class="topic">
-    <div class="entry-no">专题 · 01 / KEYWORD「mac 时光机器」</div>
-    <h2><a href="20261025-mac-timemachine.html">Mac 时间机器使用指南</a></h2>
-    <div class="meta">15 篇爬取 <b>·</b> 最高赞 1714 <b>·</b> 校验 15 / 无效 0 / 重复 0</div>
-    <p class="excerpt">
-      从 13 篇相关帖子和评论区整理出的完整使用指南:一块外置硬盘、四步设置,此后插上硬盘就自动备份。
-      涵盖准备工作、开启设置、日常使用、误删恢复,以及七条真实翻车教训——从 iCloud 同步的盲区,
-      到 187 万个小文件拖慢备份 22 小时的元凶。
-    </p>
-    <blockquote class="pullquote">
-      人生没有后悔药,但 Mac 有。
-      <cite>—— 帖子标题 · 24 赞</cite>
-    </blockquote>
-    <a class="readmore" href="20261025-mac-timemachine.html">阅读全文 →</a>
-  </article>
+  <section class="gallery" id="gallery">
 
-  <article class="topic">
-    <div class="entry-no">专题 · 02 / KEYWORD「外置硬盘 推荐」</div>
-    <h2><a href="20261025-external-hdd.html">外置硬盘推荐</a></h2>
-    <div class="meta">15 篇爬取 <b>·</b> 最高评论 418 <b>·</b> 校验 15 / 无效 0 / 重复 0</div>
-    <p class="excerpt">
-      这个关键词下高热帖大多是"求推荐"提问帖,真正的结论藏在评论区。我们把正文和 300+ 条评论提炼成
-      三张表:机械硬盘(希捷口碑最好)、移动固态(T7 出现频率最高)、DIY 方案,外加 Mac"尿袋"磁吸玩法
-      与选购口诀。价格提醒:硬盘近一年持续涨价,帖内价格仅供参考。
-    </p>
-    <blockquote class="pullquote">
-      除了贵,我看都推荐它。
-      <cite>—— 关于三星 T7 的高赞评论</cite>
-    </blockquote>
-    <a class="readmore" href="20261025-external-hdd.html">阅读全文 →</a>
-  </article>
+    <article class="card" data-date="20261025" data-heat="1714">
+      <a class="cover-link" href="20261025-mac-timemachine.html" aria-label="Mac 时间机器使用指南">
+        <svg class="cover" viewBox="0 0 300 400" role="img" aria-label="封面:时间机器">
+          <rect width="300" height="400" fill="var(--paper)"/>
+          <g fill="none" stroke="var(--ink)" stroke-width="0.7">
+            <circle cx="150" cy="205" r="16"  opacity="0.9"/>
+            <circle cx="150" cy="205" r="32"  opacity="0.75"/>
+            <circle cx="150" cy="205" r="48"  opacity="0.6"/>
+            <circle cx="150" cy="205" r="64"  opacity="0.45"/>
+            <circle cx="150" cy="205" r="80"  opacity="0.3"/>
+            <circle cx="150" cy="205" r="96"  opacity="0.18"/>
+          </g>
+          <line x1="150" y1="205" x2="218" y2="138" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="150" cy="205" r="4.5" fill="var(--accent)"/>
+          <text x="22" y="48" class="cover-no">№01</text>
+          <text x="22" y="94" class="cover-title">时间机器</text>
+          <line x1="24" y1="106" x2="92" y2="106" class="cover-rule"/>
+          <text x="150" y="322" text-anchor="middle" class="cover-deck">人生没有后悔药,但 Mac 有</text>
+          <line x1="24" y1="340" x2="276" y2="340" stroke="var(--ink)" stroke-width="1"/>
+          <text x="150" y="358" text-anchor="middle" class="cover-brand">THE XHS DIGEST</text>
+          <text x="150" y="376" text-anchor="middle" class="cover-date">2026.10.25 · KEYWORD「mac 时光机器」</text>
+        </svg>
+      </a>
+      <div class="card-body">
+        <div class="entry-no">专题 01 · 2026.10.25</div>
+        <h2><a href="20261025-mac-timemachine.html">Mac 时间机器使用指南</a></h2>
+        <div class="meta">15 篇爬取 <b>·</b> 最高赞 1714 <b>·</b> 校验 15 / 无效 0 / 重复 0</div>
+        <p class="excerpt">一块外置硬盘、四步设置,此后插上硬盘就自动备份。综合 13 篇帖子和评论区:
+        准备、设置、日常、恢复,以及七条真实翻车教训。</p>
+      </div>
+    </article>
 
-  <hr class="rule-thin">
+    <article class="card" data-date="20261025" data-heat="1568">
+      <a class="cover-link" href="20261025-external-hdd.html" aria-label="外置硬盘推荐">
+        <svg class="cover" viewBox="0 0 300 400" role="img" aria-label="封面:外置硬盘">
+          <rect width="300" height="400" fill="var(--paper)"/>
+          <defs>
+            <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="4" cy="4" r="1.4" fill="var(--ink)" opacity="0.35"/>
+            </pattern>
+          </defs>
+          <rect x="58" y="108" width="184" height="194" fill="url(#dots)"/>
+          <g fill="none" stroke="var(--ink)">
+            <circle cx="150" cy="205" r="88" stroke-width="1.6"/>
+            <circle cx="150" cy="205" r="60" stroke-width="0.9" opacity="0.7"/>
+            <circle cx="150" cy="205" r="32" stroke-width="0.9" opacity="0.7"/>
+          </g>
+          <path d="M150 205 L150 117 A88 88 0 0 1 235 170 Z" fill="var(--accent)" opacity="0.92"/>
+          <circle cx="150" cy="205" r="7" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.6"/>
+          <text x="22" y="48" class="cover-no">№01</text>
+          <text x="22" y="94" class="cover-title">外置硬盘</text>
+          <line x1="24" y1="106" x2="92" y2="106" class="cover-rule"/>
+          <text x="150" y="322" text-anchor="middle" class="cover-deck">除了贵,我看都推荐它</text>
+          <line x1="24" y1="340" x2="276" y2="340" stroke="var(--ink)" stroke-width="1"/>
+          <text x="150" y="358" text-anchor="middle" class="cover-brand">THE XHS DIGEST</text>
+          <text x="150" y="376" text-anchor="middle" class="cover-date">2026.10.25 · KEYWORD「外置硬盘 推荐」</text>
+        </svg>
+      </a>
+      <div class="card-body">
+        <div class="entry-no">专题 02 · 2026.10.25</div>
+        <h2><a href="20261025-external-hdd.html">外置硬盘推荐</a></h2>
+        <div class="meta">15 篇爬取 <b>·</b> 最高评论 418 <b>·</b> 校验 15 / 无效 0 / 重复 0</div>
+        <p class="excerpt">高热帖大多是"求推荐"提问帖,结论藏在评论区。正文 + 300 条评论提炼成
+        三张表:机械、固态、DIY,外加 Mac"尿袋"磁吸玩法与选购口诀。</p>
+      </div>
+    </article>
+
+  </section>
 
 </main>
 
@@ -66,7 +104,8 @@
   <div>
     <b>关于本档</b><br>
     数据由 <b>ego-browser + xhs-crawler</b> 自动爬取,全部笔记通过完整性校验(详情指纹、URL 与卡片
-    ID 一致性、跨话题去重)。每次爬取归档为一期,按「日期-主题」命名。同步档案存于飞书「爬取」文件夹:
+    ID 一致性、跨话题去重)。每次爬取归档为一期,按「日期-主题」命名;封面为代码生成的排版式 SVG,
+    可替换为任意 300×400 图片。同步档案存于飞书「爬取」文件夹:
     <a href="https://pcnlp18cy9bm.feishu.cn/docx/VZFdd6UxnoLFidxcXTPcHAGEnDg">时间机器卷</a> ·
     <a href="https://pcnlp18cy9bm.feishu.cn/docx/QcW6dP5f1o0tdqxyC6xcRCLlniw">外置硬盘卷</a>。
   </div>
@@ -75,6 +114,30 @@
     <span>EST. 2026.10</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  var gallery = document.getElementById("gallery");
+  if (!gallery) return;
+  var cards = Array.prototype.slice.call(gallery.querySelectorAll(".card"));
+  var btns = Array.prototype.slice.call(document.querySelectorAll(".sort-btn"));
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      btns.forEach(function (b) { b.classList.toggle("active", b === btn); });
+      var mode = btn.getAttribute("data-sort");
+      cards.sort(function (a, b) {
+        if (mode === "hot") {
+          return parseInt(b.getAttribute("data-heat"), 10) - parseInt(a.getAttribute("data-heat"), 10);
+        }
+        var d = b.getAttribute("data-date").localeCompare(a.getAttribute("data-date"));
+        return d !== 0 ? d
+          : parseInt(b.getAttribute("data-heat"), 10) - parseInt(a.getAttribute("data-heat"), 10);
+      });
+      cards.forEach(function (c) { gallery.appendChild(c); });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
