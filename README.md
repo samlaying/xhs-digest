@@ -9,19 +9,22 @@
 ## 结构
 
 ```
-index.html                        # 封面:刊头 + 期号 + 每期专题目录
+index.html                        # 封面画廊:刊头 + 排序(最新/最热)+ 专题卡片
 20261025-mac-timemachine.html     # №01 专题一:Mac 时间机器使用指南
 20261025-external-hdd.html        # №01 专题二:外置硬盘推荐
+covers/*.jpg                      # 封面插画(ChatGPT 生成,ego-browser 驱动,720px JPEG)
 styles.css                        # 设计系统(纸白/墨黑/社论红,衬线,双细线)
 ```
 
 ## 如何新增一期
 
 1. 爬取:`sh skills/xhs-crawler/scripts/xhs_run.sh "<关键词>" "<slug>" <篇数>`
-2. 新建 `YYYYMMDD-<slug>.html`(复制任一专题页改内容;章节用 壹/贰/叁 kicker + `.section-kicker`)
-3. `index.html` 顶部加新一期:期号 +1,插入目录条目(序号 / 标题 / meta / 摘要 / pullquote 引语 / 链接),
-   旧期下移;`issue-head` 的统计行同步更新
-4. commit + push,Pages 自动发布
+2. 封面:让 ChatGPT 生成 3:4 无文字编辑风插画(纸底/墨线/正红点缀,顶部留白),
+   存为 `covers/<slug>.jpg`(720px 宽即可,~70KB)
+3. 新建 `YYYYMMDD-<slug>.html`(复制任一专题页改内容;章节用 壹/贰/叁 kicker + `.section-kicker`)
+4. `index.html` 画廊加一张卡片:`.card`(data-date/data-heat 供排序)+ `.cover-photo`
+   (img + `.cover-overlay` 排版文字:№、标题、红规线);统计行同步更新
+5. commit + push,Pages 自动发布
 
 ## 设计令牌
 

@@ -371,48 +371,55 @@ tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
 
 .card { display: flex; flex-direction: column; }
 .cover-link { display: block; border: 1px solid var(--rule); }
-.cover {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.25s ease;
-}
-.cover-link:hover .cover { transform: scale(1.018); }
 .cover-link:hover { border-color: var(--ink); }
 
+/* 封面 = AI 插画 + 排版文字叠加(容器查询随卡片宽度等比缩放) */
+.cover-photo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--paper);
+}
+.cover-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.cover-link:hover .cover-img { transform: scale(1.025); }
+
+.cover-overlay {
+  position: absolute;
+  top: 5cqw;
+  left: 6cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .cover-no {
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: 8cqw;
   font-style: italic;
   font-weight: 700;
-  fill: var(--accent);
-  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--accent);
 }
 .cover-title {
   font-family: var(--serif);
-  font-size: 34px;
+  font-size: 12cqw;
   font-weight: 700;
-  fill: var(--ink);
+  line-height: 1.15;
   letter-spacing: 0.06em;
+  color: var(--ink);
+  margin-top: 1.5cqw;
 }
-.cover-rule { stroke: var(--accent); stroke-width: 2.5; }
-.cover-deck {
-  font-family: var(--serif);
-  font-size: 12.5px;
-  font-style: italic;
-  fill: var(--muted);
-}
-.cover-brand {
-  font-family: var(--sans);
-  font-size: 8.5px;
-  font-weight: 600;
-  letter-spacing: 0.34em;
-  fill: var(--ink);
-}
-.cover-date {
-  font-family: var(--mono);
-  font-size: 8.5px;
-  fill: var(--muted);
+.cover-rule {
+  width: 24cqw;
+  height: 1.1cqw;
+  background: var(--accent);
+  margin-top: 3cqw;
 }
 
 .card-body { padding-top: 0.9rem; }
