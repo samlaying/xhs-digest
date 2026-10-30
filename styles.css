@@ -578,3 +578,77 @@ tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
   .article-body > .lede::first-letter { font-size: 3em; }
   .masthead { padding-top: 3rem; }
 }
+
+/* ---------- 逐篇精读 essence ---------- */
+.section-intro {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  margin: 0 0 1.4rem !important;
+  border-left: 2px solid var(--rule);
+  padding-left: 0.9rem;
+}
+
+.essence {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0 1.3rem;
+}
+.essence:first-of-type { border-top: 1px solid var(--ink); }
+
+.essence-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.essence-no {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  flex: none;
+}
+.essence-head h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.essence-meta {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+  margin: 0.35rem 0 0 2.05rem;
+}
+
+.essence-line {
+  font-size: 0.96rem;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.8;
+  margin: 0.7rem 0 0.55rem 2.05rem;
+}
+.essence-line::before {
+  content: "▸ ";
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.essence-list {
+  margin: 0 0 0 2.05rem !important;
+  padding-left: 1.15rem !important;
+}
+.essence-list li {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  margin-bottom: 0.4rem !important;
+  color: #2a2723;
+}
+.essence-list li::marker { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .essence-meta, .essence-line, .essence-list { margin-left: 0 !important; }
+  .essence-head { flex-wrap: wrap; gap: 0.35rem 0.6rem; }
+}
